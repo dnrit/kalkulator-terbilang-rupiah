@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalkulator Terbilang Rupiah Online</title>
+  <meta name="description" content="Kalkulator terbilang rupiah online untuk mengubah angka nominal uang menjadi teks terbilang Bahasa Indonesia secara cepat." />
+  <meta name="keywords" content="kalkulator terbilang rupiah, terbilang rupiah, angka ke huruf, nominal rupiah, tools rupiah" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Kalkulator Terbilang Rupiah Online" />
+  <meta property="og:description" content="Ubah angka nominal rupiah menjadi teks terbilang Bahasa Indonesia dengan mudah." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="/" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="badge">Tools Rupiah</div>
+      <h1>Kalkulator Terbilang Rupiah</h1>
+      <p>Ubah angka nominal uang menjadi teks terbilang Bahasa Indonesia secara cepat, rapi, dan mudah disalin.</p>
+    </section>
+
+    <section class="card calculator">
+      <label for="amount">Masukkan nominal rupiah</label>
+      <div class="input-wrap">
+        <span>Rp</span>
+        <input id="amount" type="text" inputmode="numeric" placeholder="Contoh: 1250000" autocomplete="off" />
+      </div>
+
+      <div class="actions">
+        <button id="convertBtn" type="button">Ubah ke Terbilang</button>
+        <button id="clearBtn" type="button" class="secondary">Reset</button>
+      </div>
+
+      <div class="result-box">
+        <p class="result-label">Hasil terbilang:</p>
+        <div id="result" class="result">Masukkan nominal terlebih dahulu.</div>
+        <button id="copyBtn" type="button" class="copy">Salin Hasil</button>
+      </div>
+    </section>
+
+    <section class="card info">
+      <h2>Cara Menggunakan</h2>
+      <ol>
+        <li>Masukkan nominal rupiah tanpa titik atau koma.</li>
+        <li>Klik tombol <strong>Ubah ke Terbilang</strong>.</li>
+        <li>Salin hasil untuk nota, invoice, kuitansi, atau dokumen pembayaran.</li>
+      </ol>
+    </section>
+
+    <section class="card info">
+      <h2>Contoh Terbilang Rupiah</h2>
+      <div class="examples">
+        <button data-value="100000">Rp100.000</button>
+        <button data-value="1250000">Rp1.250.000</button>
+        <button data-value="1081699">Rp1.081.699</button>
+        <button data-value="2500000000">Rp2.500.000.000</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Kalkulator Terbilang Rupiah. Dibuat dengan HTML, CSS, dan JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

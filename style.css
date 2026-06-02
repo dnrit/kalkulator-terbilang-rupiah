@@ -1,0 +1,226 @@
+:root {
+  --bg: #f7f8fb;
+  --card: #ffffff;
+  --text: #151922;
+  --muted: #666f80;
+  --primary: #111827;
+  --primary-hover: #273244;
+  --border: #e3e7ef;
+  --soft: #eef2f8;
+  --success: #116b43;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #ffffff 0%, var(--bg) 48%, #edf1f7 100%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.page {
+  width: min(920px, 92%);
+  margin: 0 auto;
+  padding: 56px 0 32px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.badge {
+  display: inline-flex;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: clamp(34px, 6vw, 58px);
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.hero p {
+  max-width: 660px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: 0 24px 70px rgba(31, 41, 55, 0.08);
+  padding: 26px;
+  margin-bottom: 18px;
+}
+
+.calculator label {
+  display: block;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 18px;
+  padding: 0 16px;
+  min-height: 62px;
+}
+
+.input-wrap span {
+  font-weight: 900;
+  color: var(--primary);
+}
+
+input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text);
+  background: transparent;
+}
+
+input::placeholder {
+  color: #aab2c0;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+button {
+  border: 0;
+  border-radius: 14px;
+  padding: 14px 18px;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+#convertBtn, .copy {
+  background: var(--primary);
+  color: #fff;
+}
+
+#convertBtn:hover, .copy:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.secondary {
+  background: var(--soft);
+  color: var(--primary);
+}
+
+.secondary:hover {
+  background: #e1e7f0;
+}
+
+.result-box {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #f9fafc;
+  border: 1px dashed #cdd5e2;
+}
+
+.result-label {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.result {
+  min-height: 52px;
+  font-size: 22px;
+  line-height: 1.55;
+  font-weight: 900;
+  color: var(--success);
+  word-break: break-word;
+}
+
+.copy {
+  margin-top: 14px;
+}
+
+.info h2 {
+  margin: 0 0 12px;
+  letter-spacing: -0.03em;
+}
+
+.info ol {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.examples {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.examples button {
+  background: var(--soft);
+  color: var(--primary);
+}
+
+.examples button:hover {
+  background: #dfe6f2;
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 20px 0 34px;
+  font-size: 14px;
+}
+
+@media (max-width: 560px) {
+  .page {
+    padding-top: 34px;
+  }
+
+  .card {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  input {
+    font-size: 20px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .result {
+    font-size: 19px;
+  }
+}
